@@ -1,6 +1,13 @@
 import "./styles.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MyPod from "./mypod/Index.js";
+import seattle_classic from "./mypod/photos/seattle_classic.jpg";
+import seattle_downtown from "./mypod/photos/seattle_downtown.jpg";
+import seattle_shuffle from "./mypod/photos/seattle_shuffle.jpg";
+import seattle_video from "./mypod/photos/seattle_video.jpg";
+import applestore from "./mypod/photos/applestore.jpg";
+import britain from "./mypod/photos/britain.jpg";
+import ImageFigure from "./mypod/ImageFigure.js";
 
 export default function App() {
   return (
@@ -10,8 +17,66 @@ export default function App() {
           <MyPod />
         </Route>
         <Route exact path="/html/seattle_classic.html">
-          Here
+          <ImageFigure
+            LargeImageSrc={seattle_classic}
+            alt="A classic iPod in Seattle, WA"
+            width={600}
+            height={400}
+          >
+            A classic iPod in Seattle, WA
+          </ImageFigure>
         </Route>
+        <Route exact path="/html/seattle_downtown.html">
+          <ImageFigure
+            LargeImageSrc={seattle_downtown}
+            alt="An iPod in downtown Seattle, WA"
+            width={600}
+            height={400}
+          >
+            An iPod in downtown Seattle, WA
+          </ImageFigure>
+        </Route>
+        <Route exact path="/html/seattle_shuffle.html">
+          <ImageFigure
+            LargeImageSrc={seattle_shuffle}
+            alt="An iPod Shuffle in Seattle, Wa"
+            width={600}
+            height={400}
+          >
+            An iPod Shuffle in Seattle, Wa
+          </ImageFigure>
+        </Route>
+        <Route exact path="/html/seattle_video.html">
+          <ImageFigure
+            LargeImageSrc={seattle_video}
+            alt="My video iPod in Seattle, WA"
+            width={600}
+            height={400}
+          >
+            My video iPod in Seattle, WA
+          </ImageFigure>
+        </Route>
+        <Route exact path="/html/applestore.html">
+          <ImageFigure
+            LargeImageSrc={applestore}
+            alt="An iPod at the Birmingham Apple store"
+            width={400}
+            height={600}
+          >
+            An iPod at the Birmingham Apple store
+          </ImageFigure>
+        </Route>
+        <Route exact path="/html/britain.html">
+          <ImageFigure
+            LargeImageSrc={britain}
+            alt="An iPod in Birmingham at a telephone box"
+            width={400}
+            height={600}
+          >
+            An iPod in Birmingham at a telephone box
+          </ImageFigure>
+        </Route>
+
         <Route exact path="/somewhere/foo.html">
           You've reached the foo page!
         </Route>
